@@ -1,9 +1,4 @@
-import {
-	Button,
-	HStack,
-	Input,
-	useToast,
-} from '@chakra-ui/react'
+import {Button, HStack, Input, useToast} from '@chakra-ui/react'
 import {useState} from 'react'
 import {nanoid} from 'nanoid'
 
@@ -36,19 +31,8 @@ function AddTodo({addTodo}) {
 	return (
 		<form onSubmit={handleSubmit}>
 			<HStack mt='8'>
-				<Input
-					variant='filled'
-					placeholder='What needs to be done?'
-					value={content}
-					onChange={(e) =>
-						setContent(e.target.value)
-					}
-				/>
-				<Button
-					colorScheme='pink'
-					px='8'
-					type='submit'
-				>
+				<Input variant='filled' placeholder='What needs to be done?' value={content} onChange={(e) => setContent(e.target.value)} />
+				<Button colorScheme='pink' px='8' type='submit'>
 					Add Todo
 				</Button>
 			</HStack>
